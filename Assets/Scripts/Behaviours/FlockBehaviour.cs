@@ -5,10 +5,4 @@ using UnityEngine;
 public abstract class FlockBehaviour : ScriptableObject
 {
     public abstract Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock);
-
-    int Test()
-    {
-        int y = 1;
-        return y;
-    }
 }

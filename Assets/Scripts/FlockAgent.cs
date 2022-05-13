@@ -6,6 +6,8 @@ using UnityEngine;
 public class FlockAgent : MonoBehaviour
 {
     #region Variables
+    Flock agentFlock;
+
     private Collider2D _agentCollider;
     #endregion
     #region Properties
@@ -14,6 +16,11 @@ public class FlockAgent : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() => _agentCollider = GetComponent<Collider2D>();
+
+    public void Initialise(Flock flock)
+    {
+        agentFlock = flock;
+    }
 
     public void Move(Vector2 velocity)
     {
