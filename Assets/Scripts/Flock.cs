@@ -21,11 +21,14 @@ public class Flock : MonoBehaviour
     [Range(1f, 10f)]
     public float neighbourRadius = 1.5f;
     [Range(0f, 1f)]
-    public float avoidanceRadiusMultiplier;
+    public float avoidanceRadiusMultiplier = 0.5f;
 
     float _squareMaxSpeed;
     float _squareNeighbourRadius;
     float _squareAvoidanceRadius;
+    #endregion
+    #region Properties
+    public float SquareAvoidanceRadius { get => _squareAvoidanceRadius; }
     #endregion
 
     private void Start()
@@ -55,7 +58,7 @@ public class Flock : MonoBehaviour
             List<Transform> context = GetNearbyObjects(agent);
 
             //FOR TESTING
-            agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.green, context.Count / 6f);
+            //agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.green, context.Count / 6f);
 
             Vector2 move = behaviour.CalculateMove(agent, context, this);
             move *= driveFactor;

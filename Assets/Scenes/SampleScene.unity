@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -176,7 +176,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 25
+  orthographic size: 50
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 905453998}
   - component: {fileID: 905453997}
   m_Layer: 0
-  m_Name: Flock
+  m_Name: Flock Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,13 +237,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentPrefab: {fileID: 755104119055561079, guid: 0e39812fd545f64438ae0bcfe7d7fed9, type: 3}
   agents: []
-  behaviour: {fileID: 11400000, guid: 0708727aad9e56741a5a08eb5fdedd40, type: 2}
+  behaviour: {fileID: 11400000, guid: 182140c918230e94397b4707741c2a8f, type: 2}
   startingCount: 250
   agentDensity: 0.08
   driveFactor: 10
   maxSpeed: 5
-  neighbourRadius: 1.5
-  avoidanceRadiusMultiplier: 0
+  neighbourRadius: 3
+  avoidanceRadiusMultiplier: 0.7
 --- !u!4 &905453998
 Transform:
   m_ObjectHideFlags: 0
@@ -257,4 +257,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1860718045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1860718047}
+  - component: {fileID: 1860718046}
+  m_Layer: 0
+  m_Name: Flock Blue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1860718046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860718045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554a8165a73b05042906fd97ae12c45b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentPrefab: {fileID: 755104119055561079, guid: 43dd1d021036d254b8ab28fe98cf3597, type: 3}
+  agents: []
+  behaviour: {fileID: 11400000, guid: 0708727aad9e56741a5a08eb5fdedd40, type: 2}
+  startingCount: 250
+  agentDensity: 0.08
+  driveFactor: 10
+  maxSpeed: 5
+  neighbourRadius: 3
+  avoidanceRadiusMultiplier: 0.7
+--- !u!4 &1860718047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860718045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
